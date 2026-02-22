@@ -6,9 +6,9 @@ import shutil
 import tempfile
 import time
 
-from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.webdriver import WebDriver as Chrome
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
@@ -49,7 +49,7 @@ def wait_for_txt_file(
     )
 
 
-def close_emergent_modal(driver: webdriver.Chrome) -> None:
+def close_emergent_modal(driver: Chrome) -> None:
     try:
         close_btn = driver.find_element(
             By.CSS_SELECTOR, "button[onclick*='modal_emergente_close']"
@@ -73,7 +73,7 @@ def download_cartola_txt(account_button_id: str) -> str:
             "safebrowsing.enabled": True,
         },
     )
-    driver = webdriver.Chrome(options=chrome_options)
+    driver = Chrome(options=chrome_options)
     try:
         driver.get(BANK_LOGIN_URL)
         wait = WebDriverWait(driver, 20)
