@@ -28,7 +28,7 @@ def read_xls(file_path: str, field_definitions: dict[str, Any]) -> pd.DataFrame:
         colname = amount_is_payment_if_contains.get("column_name", "description")
         value = amount_is_payment_if_contains.get("value", "")
         df["amount"] = df.apply(
-            lambda row: (-row["amount"] if value in row[colname] else row["amount"]),
+            lambda row: -row["amount"] if value in row[colname] else row["amount"],
             axis=1,
         )
 

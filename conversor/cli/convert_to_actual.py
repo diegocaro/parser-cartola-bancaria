@@ -4,9 +4,9 @@ import sys
 
 import pandas as pd
 
-from ahorratron.conversor.field_def_registry import FIELD_DEFINITION_PATHS
-from ahorratron.conversor.parsers.txt import read_fixed_width_file
-from ahorratron.conversor.parsers.xls import read_xls
+from conversor.field_def_registry import FIELD_DEFINITION_PATHS
+from conversor.parsers.txt import read_fixed_width_file
+from conversor.parsers.xls import read_xls
 
 
 def convert_to_actual(df: pd.DataFrame) -> pd.DataFrame:

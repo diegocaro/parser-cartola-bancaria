@@ -9,6 +9,7 @@ dependencies = [
     "selenium>=4.34.2",
     "xlrd>=2.0.2",
     "cachetools>=6.1.0",
+    "selenium>=4.34.2",
     "pycryptodome>=3.23.0",
 ]
 
