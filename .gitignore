@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Temporary files
+tmp
+
+# Dotenv files
+.env
+
+
+# Pytest Coverage
+.coverage
+
+# macOS files
+.DS_Store
